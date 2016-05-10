@@ -9,6 +9,7 @@
 #import "FirstViewController.h"
 #import "APIClient.h"
 #import "API.h"
+#import "FirstViewCell.h"
 
 @interface FirstViewController ()
 
@@ -21,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"第一个view";
+    self.navigationItem.title = @"V2EX";
     
     _vTb = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, WIN_WIDTH, WIN_HEIGHT)];
     _vTb.delegate = self;
@@ -34,7 +35,8 @@
 
 - (void)initData{
     [APIClient getData:[API hotTopicsPath] params:nil success:^(id data) {
-        
+        _mDatas = data;
+        [_vTb reloadData];
     } failure:nil];
 }
 
@@ -47,12 +49,19 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    FirstViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FirstViewCell"];
+    if (cell == nil) {
+        cell = [[FirstViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"FirstViewCell"];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    cell.data = [_mDatas objectAtIndex:indexPath.row];
+    [cell refreshView];
     
-    return NULL;
+    return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 135;
+    return 90;
 }
 
 - (void)didReceiveMemoryWarning {

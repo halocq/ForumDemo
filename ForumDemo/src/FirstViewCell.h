@@ -10,4 +10,7 @@
 
 @interface FirstViewCell : UITableViewCell
 
+@property (nonatomic) NSDictionary *data;
+- (void)refreshView;
+
 @end

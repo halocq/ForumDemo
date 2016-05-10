@@ -11,12 +11,12 @@
 @implementation API
 
 +(NSString *) basePath {
-    return @"https://www.v2ex.com/api";
+    return @"https://www.v2ex.com/api/";
 }
 
 //======================= first page
 
 +(NSString *) hotTopicsPath{
-    return @"/topics/hot.json";
+    return @"topics/hot.json";
 }
 @end
