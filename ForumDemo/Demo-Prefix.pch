@@ -9,10 +9,13 @@
 #ifndef Demo_Prefix_pch
 #define Demo_Prefix_pch
 #define okAlert(...) UIAlertView *okAlertView = [[UIAlertView alloc] initWithTitle:@"信息" message:__VA_ARGS__ delegate:[[[UIApplication sharedApplication] delegate] window] cancelButtonTitle:@"确定" otherButtonTitles:nil, nil]; [okAlertView show];
+#define WIN_WIDTH  [[UIScreen mainScreen] bounds].size.width
+#define WIN_HEIGHT [[UIScreen mainScreen] bounds].size.height
 
 #ifdef __OBJC__
 
 #import "UIColor+Additions.h"
+#import "UIView+Additions.h"
 
 #endif
 // Include any system framework and library headers here that should be included in all compilation units.

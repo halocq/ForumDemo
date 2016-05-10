@@ -23,6 +23,9 @@
 		99E093BD1CE18D9E00AC11BF /* icon_mine_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99E093B91CE18D9E00AC11BF /* icon_mine_default@2x.png */; };
 		99E093BE1CE18D9E00AC11BF /* icon_mine_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99E093BA1CE18D9E00AC11BF /* icon_mine_selected@2x.png */; };
 		99E093C21CE190E400AC11BF /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E093C11CE190E400AC11BF /* APIClient.m */; };
+		99E093C51CE1BB0100AC11BF /* API.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E093C41CE1BB0100AC11BF /* API.m */; };
+		99E093C81CE1BD7A00AC11BF /* FirstViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E093C71CE1BD7A00AC11BF /* FirstViewCell.m */; };
+		99E093CB1CE1C69900AC11BF /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E093CA1CE1C69900AC11BF /* UIView+Additions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,12 @@
 		99E093BA1CE18D9E00AC11BF /* icon_mine_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_mine_selected@2x.png"; path = "resource/icon_mine_selected@2x.png"; sourceTree = "<group>"; };
 		99E093C01CE190E400AC11BF /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
 		99E093C11CE190E400AC11BF /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
+		99E093C31CE1BB0100AC11BF /* API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = API.h; path = src/API.h; sourceTree = "<group>"; };
+		99E093C41CE1BB0100AC11BF /* API.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = API.m; path = src/API.m; sourceTree = "<group>"; };
+		99E093C61CE1BD7A00AC11BF /* FirstViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewCell.h; path = src/FirstViewCell.h; sourceTree = "<group>"; };
+		99E093C71CE1BD7A00AC11BF /* FirstViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewCell.m; path = src/FirstViewCell.m; sourceTree = "<group>"; };
+		99E093C91CE1C69900AC11BF /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
+		99E093CA1CE1C69900AC11BF /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
 		9BFFF706A003C5781876049A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		ED1C0D7CE420E2F9B6CED472 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB8EF51B40A9DBBE5E490CDA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -175,6 +184,8 @@
 				99E093B01CE18CE500AC11BF /* FirstViewController.m */,
 				99E093B11CE18CE500AC11BF /* SecondViewController.h */,
 				99E093B21CE18CE500AC11BF /* SecondViewController.m */,
+				99E093C61CE1BD7A00AC11BF /* FirstViewCell.h */,
+				99E093C71CE1BD7A00AC11BF /* FirstViewCell.m */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -201,11 +212,15 @@
 		99E093BF1CE190A700AC11BF /* Commen */ = {
 			isa = PBXGroup;
 			children = (
+				99E093C91CE1C69900AC11BF /* UIView+Additions.h */,
+				99E093CA1CE1C69900AC11BF /* UIView+Additions.m */,
 				99E093A41CE17B2200AC11BF /* TabBarController.h */,
 				99E093A51CE17B2200AC11BF /* TabBarController.m */,
 				99E093AA1CE18A4500AC11BF /* UIColor+Additions.h */,
 				99E093C01CE190E400AC11BF /* APIClient.h */,
 				99E093C11CE190E400AC11BF /* APIClient.m */,
+				99E093C31CE1BB0100AC11BF /* API.h */,
+				99E093C41CE1BB0100AC11BF /* API.m */,
 			);
 			name = Commen;
 			sourceTree = "<group>";
@@ -415,8 +430,11 @@
 				99E093B41CE18CE500AC11BF /* SecondViewController.m in Sources */,
 				99E093C21CE190E400AC11BF /* APIClient.m in Sources */,
 				99C53E1D1CE0E0F1002D289D /* AppDelegate.m in Sources */,
+				99E093CB1CE1C69900AC11BF /* UIView+Additions.m in Sources */,
 				99E093A61CE17B2200AC11BF /* TabBarController.m in Sources */,
 				99C53E1A1CE0E0F1002D289D /* main.m in Sources */,
+				99E093C81CE1BD7A00AC11BF /* FirstViewCell.m in Sources */,
+				99E093C51CE1BB0100AC11BF /* API.m in Sources */,
 				99E093B31CE18CE500AC11BF /* FirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

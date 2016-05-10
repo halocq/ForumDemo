@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "TabBarController.h"
+#import "APIClient.h"
+#import "API.h"
 
 @interface AppDelegate ()
 
@@ -20,6 +22,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [APIClient setBaseURL:[API basePath]];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

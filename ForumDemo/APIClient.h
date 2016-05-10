@@ -10,6 +10,7 @@
 
 @interface APIClient : AFHTTPRequestOperationManager
 
++ (void)setBaseURL:(NSString*)url;
 + (void)getData:(NSString *)url params:(NSDictionary *)params success:(void (^)(id data))success failure:(void (^)(NSError *error))failure;
 + (void)postData:(NSString *)url params:(NSDictionary *)params success:(void (^)(id data))success failure:(void (^)(NSError *error))failure;
 + (void)putData:(NSString *)url params:(NSDictionary *)params success:(void (^)(id data))success failure:(void (^)(NSError *error))failure;
