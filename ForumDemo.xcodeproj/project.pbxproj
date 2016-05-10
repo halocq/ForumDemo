@@ -16,6 +16,7 @@
 		99C53E2B1CE0E0F1002D289D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99C53E291CE0E0F1002D289D /* LaunchScreen.storyboard */; };
 		99C53E361CE0E0F1002D289D /* ForumDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C53E351CE0E0F1002D289D /* ForumDemoTests.m */; };
 		99C53E411CE0E0F1002D289D /* ForumDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C53E401CE0E0F1002D289D /* ForumDemoUITests.m */; };
+		99E093A61CE17B2200AC11BF /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E093A51CE17B2200AC11BF /* TabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		99C53E3C1CE0E0F1002D289D /* ForumDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForumDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99C53E401CE0E0F1002D289D /* ForumDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForumDemoUITests.m; sourceTree = "<group>"; };
 		99C53E421CE0E0F1002D289D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99E093A41CE17B2200AC11BF /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		99E093A51CE17B2200AC11BF /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,17 +107,16 @@
 		99C53E171CE0E0F1002D289D /* ForumDemo */ = {
 			isa = PBXGroup;
 			children = (
+				99E093A31CE17AC800AC11BF /* src */,
 				99C53E1B1CE0E0F1002D289D /* AppDelegate.h */,
 				99C53E1C1CE0E0F1002D289D /* AppDelegate.m */,
-				99C53E1E1CE0E0F1002D289D /* FirstViewController.h */,
-				99C53E1F1CE0E0F1002D289D /* FirstViewController.m */,
-				99C53E211CE0E0F1002D289D /* SecondViewController.h */,
-				99C53E221CE0E0F1002D289D /* SecondViewController.m */,
 				99C53E241CE0E0F1002D289D /* Main.storyboard */,
 				99C53E271CE0E0F1002D289D /* Assets.xcassets */,
 				99C53E291CE0E0F1002D289D /* LaunchScreen.storyboard */,
 				99C53E2C1CE0E0F1002D289D /* Info.plist */,
 				99C53E181CE0E0F1002D289D /* Supporting Files */,
+				99E093A41CE17B2200AC11BF /* TabBarController.h */,
+				99E093A51CE17B2200AC11BF /* TabBarController.m */,
 			);
 			path = ForumDemo;
 			sourceTree = "<group>";
@@ -143,6 +145,17 @@
 				99C53E421CE0E0F1002D289D /* Info.plist */,
 			);
 			path = ForumDemoUITests;
+			sourceTree = "<group>";
+		};
+		99E093A31CE17AC800AC11BF /* src */ = {
+			isa = PBXGroup;
+			children = (
+				99C53E1E1CE0E0F1002D289D /* FirstViewController.h */,
+				99C53E1F1CE0E0F1002D289D /* FirstViewController.m */,
+				99C53E211CE0E0F1002D289D /* SecondViewController.h */,
+				99C53E221CE0E0F1002D289D /* SecondViewController.m */,
+			);
+			name = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +290,7 @@
 			files = (
 				99C53E231CE0E0F1002D289D /* SecondViewController.m in Sources */,
 				99C53E1D1CE0E0F1002D289D /* AppDelegate.m in Sources */,
+				99E093A61CE17B2200AC11BF /* TabBarController.m in Sources */,
 				99C53E201CE0E0F1002D289D /* FirstViewController.m in Sources */,
 				99C53E1A1CE0E0F1002D289D /* main.m in Sources */,
 			);
@@ -504,6 +518,7 @@
 				99C53E471CE0E0F1002D289D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		99C53E481CE0E0F1002D289D /* Build configuration list for PBXNativeTarget "ForumDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +527,7 @@
 				99C53E4A1CE0E0F1002D289D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		99C53E4B1CE0E0F1002D289D /* Build configuration list for PBXNativeTarget "ForumDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +536,7 @@
 				99C53E4D1CE0E0F1002D289D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
