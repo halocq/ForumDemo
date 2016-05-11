@@ -9,6 +9,7 @@
 #import "TabBarController.h"
 #import "FirstViewController.h"
 #import "SecondViewController.h"
+#import "RecentController.h"
 
 @interface TabBarController ()
 
@@ -32,6 +33,13 @@
     firstNav.tabBarItem.selectedImage = [[UIImage imageNamed:@"icon_home_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     [firstNav.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:MENU_ITEM_SELECTED_COLOR, NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
 
+    RecentController *newVC = [[RecentController alloc] init];
+    UINavigationController *newNav = [[UINavigationController alloc] initWithRootViewController:newVC];
+    newNav.tabBarItem.title = @"最新";
+    newNav.tabBarItem.image = [UIImage imageNamed:@"icon_home_default"];
+    newNav.tabBarItem.selectedImage = [[UIImage imageNamed:@"icon_home_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    [newNav.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:MENU_ITEM_SELECTED_COLOR, NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
+
     SecondViewController *secondVC = [[SecondViewController alloc] init];
     UINavigationController *secondNav = [[UINavigationController alloc] initWithRootViewController:secondVC];
     secondNav.tabBarItem.title = @"我";
@@ -39,7 +47,7 @@
     secondNav.tabBarItem.selectedImage = [[UIImage imageNamed:@"icon_mine_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     [secondNav.tabBarItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:MENU_ITEM_SELECTED_COLOR, NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
 
-    self.viewControllers = [NSArray arrayWithObjects:firstNav, secondNav, nil];
+    self.viewControllers = [NSArray arrayWithObjects:firstNav, newNav,secondNav, nil];
 
 }
 

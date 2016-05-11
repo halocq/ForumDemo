@@ -14,4 +14,5 @@
 
 //=========================first page
 +(NSString *) hotTopicsPath;
++(NSString *) newTopicsPath;
 @end

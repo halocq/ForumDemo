@@ -19,4 +19,9 @@
 +(NSString *) hotTopicsPath{
     return @"topics/hot.json";
 }
+
++(NSString *) newTopicsPath{
+    return @"topics/latest.json";
+}
+
 @end
