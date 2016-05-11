@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"第二个view";
+    self.navigationItem.title = @"这是个人主页";
     // Do any additional setup after loading the view, typically from a nib.
 }
 

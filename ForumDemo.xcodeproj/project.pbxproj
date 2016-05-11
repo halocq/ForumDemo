@@ -28,6 +28,7 @@
 		999DB1281CE1E61F003D085B /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 999DB1141CE1E61F003D085B /* UIScrollView+MJRefresh.m */; };
 		999DB1291CE1E61F003D085B /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 999DB1161CE1E61F003D085B /* UIView+MJExtension.m */; };
 		999DB12C1CE2CB8B003D085B /* RecentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 999DB12B1CE2CB8B003D085B /* RecentController.m */; };
+		999DB12F1CE304B5003D085B /* TopicShowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 999DB12E1CE304B5003D085B /* TopicShowController.m */; };
 		99C53E1A1CE0E0F1002D289D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C53E191CE0E0F1002D289D /* main.m */; };
 		99C53E1D1CE0E0F1002D289D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C53E1C1CE0E0F1002D289D /* AppDelegate.m */; };
 		99C53E261CE0E0F1002D289D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99C53E241CE0E0F1002D289D /* Main.storyboard */; };
@@ -106,6 +107,8 @@
 		999DB1161CE1E61F003D085B /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		999DB12A1CE2CB8B003D085B /* RecentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecentController.h; path = src/RecentController.h; sourceTree = "<group>"; };
 		999DB12B1CE2CB8B003D085B /* RecentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecentController.m; path = src/RecentController.m; sourceTree = "<group>"; };
+		999DB12D1CE304B5003D085B /* TopicShowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopicShowController.h; path = src/TopicShowController.h; sourceTree = "<group>"; };
+		999DB12E1CE304B5003D085B /* TopicShowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopicShowController.m; path = src/TopicShowController.m; sourceTree = "<group>"; };
 		99C53E151CE0E0F0002D289D /* ForumDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForumDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99C53E191CE0E0F1002D289D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		99C53E1B1CE0E0F1002D289D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -342,6 +345,8 @@
 				99E093C71CE1BD7A00AC11BF /* FirstViewCell.m */,
 				999DB12A1CE2CB8B003D085B /* RecentController.h */,
 				999DB12B1CE2CB8B003D085B /* RecentController.m */,
+				999DB12D1CE304B5003D085B /* TopicShowController.h */,
+				999DB12E1CE304B5003D085B /* TopicShowController.m */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -607,6 +612,7 @@
 				99E093C81CE1BD7A00AC11BF /* FirstViewCell.m in Sources */,
 				999DB1241CE1E61F003D085B /* MJRefreshStateHeader.m in Sources */,
 				999DB1211CE1E61F003D085B /* MJRefreshBackStateFooter.m in Sources */,
+				999DB12F1CE304B5003D085B /* TopicShowController.m in Sources */,
 				999DB1291CE1E61F003D085B /* UIView+MJExtension.m in Sources */,
 				999DB1231CE1E61F003D085B /* MJRefreshNormalHeader.m in Sources */,
 				999DB11D1CE1E61F003D085B /* MJRefreshAutoNormalFooter.m in Sources */,
