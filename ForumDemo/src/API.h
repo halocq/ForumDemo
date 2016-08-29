@@ -15,4 +15,7 @@
 //=========================first page
 +(NSString *) hotTopicsPath;
 +(NSString *) newTopicsPath;
++(NSString *) topicShowPath:(NSString *)topicId;
++(NSString *) commentsShowPath:(NSString *)topicId;
+
 @end

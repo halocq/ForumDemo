@@ -35,7 +35,7 @@
     
     _timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(_creatorAvator.right + 10, _creatorName.bottom + 8, WIN_WIDTH - 100, 12)];
     _timeLabel.font = [UIFont systemFontOfSize:12.f];
-    _timeLabel.textColor = C7;
+    _timeLabel.textColor = C6;
     [self.contentView addSubview:_timeLabel];
     
     _content = [[UILabel alloc] initWithFrame:CGRectMake(10, _creatorAvator.bottom + 15, WIN_WIDTH - 20, 14)];

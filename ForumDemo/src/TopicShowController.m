@@ -10,6 +10,12 @@
 
 @interface TopicShowController ()
 
+@property (nonatomic) UIWebView *vWeb;
+
+@property (nonatomic) UITableView *vTb;
+
+@property (nonatomic) NSDictionary *headerData;
+
 @end
 
 @implementation TopicShowController
@@ -17,6 +23,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    _vTb = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, WIN_WIDTH, WIN_HEIGHT)];
+    _vTb.delegate = self;
+    _vTb.dataSource = self;
+    _vTb.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.view addSubview:_vTb];
+}
+
+- (void)initTableViewHeader{
+    
 }
 
 - (void)didReceiveMemoryWarning {

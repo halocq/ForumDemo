@@ -24,4 +24,12 @@
     return @"topics/latest.json";
 }
 
++(NSString *) topicShowPath:(NSString *)topicId{
+    return [NSString stringWithFormat:@"topics/show.json?id=%@", topicId];
+}
+
++(NSString *) commentsShowPath:(NSString *)topicId{
+    return [NSString stringWithFormat:@"api/replies/show.json?topic_id=%@", topicId];
+}
+
 @end

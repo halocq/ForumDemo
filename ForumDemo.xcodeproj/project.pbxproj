@@ -36,17 +36,17 @@
 		99C53E2B1CE0E0F1002D289D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99C53E291CE0E0F1002D289D /* LaunchScreen.storyboard */; };
 		99C53E361CE0E0F1002D289D /* ForumDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C53E351CE0E0F1002D289D /* ForumDemoTests.m */; };
 		99C53E411CE0E0F1002D289D /* ForumDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99C53E401CE0E0F1002D289D /* ForumDemoUITests.m */; };
-		99E093A61CE17B2200AC11BF /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E093A51CE17B2200AC11BF /* TabBarController.m */; };
 		99E093B31CE18CE500AC11BF /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E093B01CE18CE500AC11BF /* FirstViewController.m */; };
 		99E093B41CE18CE500AC11BF /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E093B21CE18CE500AC11BF /* SecondViewController.m */; };
 		99E093BB1CE18D9E00AC11BF /* icon_home_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99E093B71CE18D9E00AC11BF /* icon_home_default@2x.png */; };
 		99E093BC1CE18D9E00AC11BF /* icon_home_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99E093B81CE18D9E00AC11BF /* icon_home_selected@2x.png */; };
 		99E093BD1CE18D9E00AC11BF /* icon_mine_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99E093B91CE18D9E00AC11BF /* icon_mine_default@2x.png */; };
 		99E093BE1CE18D9E00AC11BF /* icon_mine_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 99E093BA1CE18D9E00AC11BF /* icon_mine_selected@2x.png */; };
-		99E093C21CE190E400AC11BF /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E093C11CE190E400AC11BF /* APIClient.m */; };
-		99E093C51CE1BB0100AC11BF /* API.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E093C41CE1BB0100AC11BF /* API.m */; };
 		99E093C81CE1BD7A00AC11BF /* FirstViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E093C71CE1BD7A00AC11BF /* FirstViewCell.m */; };
-		99E093CB1CE1C69900AC11BF /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E093CA1CE1C69900AC11BF /* UIView+Additions.m */; };
+		9E48973B1D7426DF000B7DFE /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4897331D7426DF000B7DFE /* APIClient.m */; };
+		9E48973C1D7426DF000B7DFE /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4897351D7426DF000B7DFE /* TabBarController.m */; };
+		9E48973D1D7426DF000B7DFE /* UIutils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4897381D7426DF000B7DFE /* UIutils.m */; };
+		9E48973E1D7426DF000B7DFE /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E48973A1D7426DF000B7DFE /* UIView+Additions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,9 +123,6 @@
 		99C53E3C1CE0E0F1002D289D /* ForumDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ForumDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99C53E401CE0E0F1002D289D /* ForumDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForumDemoUITests.m; sourceTree = "<group>"; };
 		99C53E421CE0E0F1002D289D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		99E093A41CE17B2200AC11BF /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
-		99E093A51CE17B2200AC11BF /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
-		99E093AA1CE18A4500AC11BF /* UIColor+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Additions.h"; sourceTree = "<group>"; };
 		99E093AB1CE18A7300AC11BF /* Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Prefix.pch"; sourceTree = "<group>"; };
 		99E093AF1CE18CE500AC11BF /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewController.h; path = src/FirstViewController.h; sourceTree = "<group>"; };
 		99E093B01CE18CE500AC11BF /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewController.m; path = src/FirstViewController.m; sourceTree = "<group>"; };
@@ -135,15 +132,18 @@
 		99E093B81CE18D9E00AC11BF /* icon_home_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_home_selected@2x.png"; path = "resource/icon_home_selected@2x.png"; sourceTree = "<group>"; };
 		99E093B91CE18D9E00AC11BF /* icon_mine_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_mine_default@2x.png"; path = "resource/icon_mine_default@2x.png"; sourceTree = "<group>"; };
 		99E093BA1CE18D9E00AC11BF /* icon_mine_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_mine_selected@2x.png"; path = "resource/icon_mine_selected@2x.png"; sourceTree = "<group>"; };
-		99E093C01CE190E400AC11BF /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
-		99E093C11CE190E400AC11BF /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
-		99E093C31CE1BB0100AC11BF /* API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = API.h; path = src/API.h; sourceTree = "<group>"; };
-		99E093C41CE1BB0100AC11BF /* API.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = API.m; path = src/API.m; sourceTree = "<group>"; };
 		99E093C61CE1BD7A00AC11BF /* FirstViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirstViewCell.h; path = src/FirstViewCell.h; sourceTree = "<group>"; };
 		99E093C71CE1BD7A00AC11BF /* FirstViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FirstViewCell.m; path = src/FirstViewCell.m; sourceTree = "<group>"; };
-		99E093C91CE1C69900AC11BF /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
-		99E093CA1CE1C69900AC11BF /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
 		9BFFF706A003C5781876049A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9E4897321D7426DF000B7DFE /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
+		9E4897331D7426DF000B7DFE /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
+		9E4897341D7426DF000B7DFE /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		9E4897351D7426DF000B7DFE /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		9E4897361D7426DF000B7DFE /* UIColor+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Additions.h"; sourceTree = "<group>"; };
+		9E4897371D7426DF000B7DFE /* UIutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIutils.h; sourceTree = "<group>"; };
+		9E4897381D7426DF000B7DFE /* UIutils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIutils.m; sourceTree = "<group>"; };
+		9E4897391D7426DF000B7DFE /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
+		9E48973A1D7426DF000B7DFE /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
 		ED1C0D7CE420E2F9B6CED472 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB8EF51B40A9DBBE5E490CDA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -292,8 +292,8 @@
 		99C53E171CE0E0F1002D289D /* ForumDemo */ = {
 			isa = PBXGroup;
 			children = (
+				9E4897311D7426DF000B7DFE /* Commen */,
 				999DB0EA1CE1E61F003D085B /* MJRefresh */,
-				99E093BF1CE190A700AC11BF /* Commen */,
 				99E093B51CE18D8800AC11BF /* resource */,
 				99E093AE1CE18CD900AC11BF /* src */,
 				99C53E1B1CE0E0F1002D289D /* AppDelegate.h */,
@@ -370,28 +370,28 @@
 			name = images;
 			sourceTree = "<group>";
 		};
-		99E093BF1CE190A700AC11BF /* Commen */ = {
-			isa = PBXGroup;
-			children = (
-				99E093C91CE1C69900AC11BF /* UIView+Additions.h */,
-				99E093CA1CE1C69900AC11BF /* UIView+Additions.m */,
-				99E093A41CE17B2200AC11BF /* TabBarController.h */,
-				99E093A51CE17B2200AC11BF /* TabBarController.m */,
-				99E093AA1CE18A4500AC11BF /* UIColor+Additions.h */,
-				99E093C01CE190E400AC11BF /* APIClient.h */,
-				99E093C11CE190E400AC11BF /* APIClient.m */,
-				99E093C31CE1BB0100AC11BF /* API.h */,
-				99E093C41CE1BB0100AC11BF /* API.m */,
-			);
-			name = Commen;
-			sourceTree = "<group>";
-		};
 		9DF394E376F69EDC1955D161 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED1C0D7CE420E2F9B6CED472 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E4897311D7426DF000B7DFE /* Commen */ = {
+			isa = PBXGroup;
+			children = (
+				9E4897321D7426DF000B7DFE /* APIClient.h */,
+				9E4897331D7426DF000B7DFE /* APIClient.m */,
+				9E4897341D7426DF000B7DFE /* TabBarController.h */,
+				9E4897351D7426DF000B7DFE /* TabBarController.m */,
+				9E4897361D7426DF000B7DFE /* UIColor+Additions.h */,
+				9E4897371D7426DF000B7DFE /* UIutils.h */,
+				9E4897381D7426DF000B7DFE /* UIutils.m */,
+				9E4897391D7426DF000B7DFE /* UIView+Additions.h */,
+				9E48973A1D7426DF000B7DFE /* UIView+Additions.m */,
+			);
+			path = Commen;
 			sourceTree = "<group>";
 		};
 		EA9677F75C4EA91E7736F27A /* Pods */ = {
@@ -473,6 +473,7 @@
 				TargetAttributes = {
 					99C53E141CE0E0F0002D289D = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = MLMC26GPF9;
 					};
 					99C53E301CE0E0F1002D289D = {
 						CreatedOnToolsVersion = 7.3;
@@ -592,21 +593,21 @@
 				999DB1171CE1E61F003D085B /* MJRefreshAutoFooter.m in Sources */,
 				999DB11E1CE1E61F003D085B /* MJRefreshAutoStateFooter.m in Sources */,
 				999DB1201CE1E61F003D085B /* MJRefreshBackNormalFooter.m in Sources */,
+				9E48973D1D7426DF000B7DFE /* UIutils.m in Sources */,
+				9E48973C1D7426DF000B7DFE /* TabBarController.m in Sources */,
 				999DB1221CE1E61F003D085B /* MJRefreshGifHeader.m in Sources */,
 				999DB1271CE1E61F003D085B /* UIScrollView+MJExtension.m in Sources */,
 				99E093B41CE18CE500AC11BF /* SecondViewController.m in Sources */,
-				99E093C21CE190E400AC11BF /* APIClient.m in Sources */,
 				999DB11B1CE1E61F003D085B /* MJRefreshHeader.m in Sources */,
 				999DB1281CE1E61F003D085B /* UIScrollView+MJRefresh.m in Sources */,
 				999DB1181CE1E61F003D085B /* MJRefreshBackFooter.m in Sources */,
 				999DB12C1CE2CB8B003D085B /* RecentController.m in Sources */,
 				999DB1261CE1E61F003D085B /* MJRefreshConst.m in Sources */,
 				99C53E1D1CE0E0F1002D289D /* AppDelegate.m in Sources */,
-				99E093CB1CE1C69900AC11BF /* UIView+Additions.m in Sources */,
 				999DB11C1CE1E61F003D085B /* MJRefreshAutoGifFooter.m in Sources */,
-				99E093A61CE17B2200AC11BF /* TabBarController.m in Sources */,
 				99C53E1A1CE0E0F1002D289D /* main.m in Sources */,
 				999DB11A1CE1E61F003D085B /* MJRefreshFooter.m in Sources */,
+				9E48973E1D7426DF000B7DFE /* UIView+Additions.m in Sources */,
 				999DB1191CE1E61F003D085B /* MJRefreshComponent.m in Sources */,
 				999DB11F1CE1E61F003D085B /* MJRefreshBackGifFooter.m in Sources */,
 				99E093C81CE1BD7A00AC11BF /* FirstViewCell.m in Sources */,
@@ -615,8 +616,8 @@
 				999DB12F1CE304B5003D085B /* TopicShowController.m in Sources */,
 				999DB1291CE1E61F003D085B /* UIView+MJExtension.m in Sources */,
 				999DB1231CE1E61F003D085B /* MJRefreshNormalHeader.m in Sources */,
+				9E48973B1D7426DF000B7DFE /* APIClient.m in Sources */,
 				999DB11D1CE1E61F003D085B /* MJRefreshAutoNormalFooter.m in Sources */,
-				99E093C51CE1BB0100AC11BF /* API.m in Sources */,
 				99E093B31CE18CE500AC11BF /* FirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -761,12 +762,15 @@
 			baseConfigurationReference = FB8EF51B40A9DBBE5E490CDA /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "ForumDemo/Demo-Prefix.pch";
 				INFOPLIST_FILE = ForumDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lufly.ForumDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -775,12 +779,15 @@
 			baseConfigurationReference = 9BFFF706A003C5781876049A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "ForumDemo/Demo-Prefix.pch";
 				INFOPLIST_FILE = ForumDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lufly.ForumDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
