@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TopicShowController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@interface TopicShowController : UIViewController<UITableViewDelegate, UITableViewDataSource, UIWebViewDelegate>
+
+@property (nonatomic) NSString *topicId;
 
 @end

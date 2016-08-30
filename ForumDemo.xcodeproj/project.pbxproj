@@ -47,6 +47,7 @@
 		9E48973C1D7426DF000B7DFE /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4897351D7426DF000B7DFE /* TabBarController.m */; };
 		9E48973D1D7426DF000B7DFE /* UIutils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4897381D7426DF000B7DFE /* UIutils.m */; };
 		9E48973E1D7426DF000B7DFE /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E48973A1D7426DF000B7DFE /* UIView+Additions.m */; };
+		9E4897411D742934000B7DFE /* API.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4897401D742934000B7DFE /* API.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +145,8 @@
 		9E4897381D7426DF000B7DFE /* UIutils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIutils.m; sourceTree = "<group>"; };
 		9E4897391D7426DF000B7DFE /* UIView+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
 		9E48973A1D7426DF000B7DFE /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
+		9E48973F1D742934000B7DFE /* API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
+		9E4897401D742934000B7DFE /* API.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API.m; sourceTree = "<group>"; };
 		ED1C0D7CE420E2F9B6CED472 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB8EF51B40A9DBBE5E490CDA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -381,6 +384,8 @@
 		9E4897311D7426DF000B7DFE /* Commen */ = {
 			isa = PBXGroup;
 			children = (
+				9E48973F1D742934000B7DFE /* API.h */,
+				9E4897401D742934000B7DFE /* API.m */,
 				9E4897321D7426DF000B7DFE /* APIClient.h */,
 				9E4897331D7426DF000B7DFE /* APIClient.m */,
 				9E4897341D7426DF000B7DFE /* TabBarController.h */,
@@ -614,6 +619,7 @@
 				999DB1241CE1E61F003D085B /* MJRefreshStateHeader.m in Sources */,
 				999DB1211CE1E61F003D085B /* MJRefreshBackStateFooter.m in Sources */,
 				999DB12F1CE304B5003D085B /* TopicShowController.m in Sources */,
+				9E4897411D742934000B7DFE /* API.m in Sources */,
 				999DB1291CE1E61F003D085B /* UIView+MJExtension.m in Sources */,
 				999DB1231CE1E61F003D085B /* MJRefreshNormalHeader.m in Sources */,
 				9E48973B1D7426DF000B7DFE /* APIClient.m in Sources */,

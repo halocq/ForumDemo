@@ -11,6 +11,7 @@
 #import "API.h"
 #import "FirstViewCell.h"
 #import "MJRefresh.h"
+#import "TopicShowController.h"
 
 @interface FirstViewController ()
 
@@ -63,6 +64,15 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 90;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSDictionary *data = [_mDatas objectAtIndex:indexPath.row];
+    TopicShowController *vc = [[TopicShowController alloc] init];
+    [vc setHidesBottomBarWhenPushed:YES];
+    vc.topicId = V(data, @"id");
+    [UIutils pushToController:vc];
+    
 }
 
 - (void)didReceiveMemoryWarning {
