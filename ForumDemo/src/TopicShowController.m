@@ -9,9 +9,13 @@
 #import "TopicShowController.h"
 #import "API.h"
 #import "APIClient.h"
+#import "STTweetLabel.h"
+#import "TopicCommentCell.h"
 
 @interface TopicShowController ()
 
+@property (nonatomic) UIView *contentView;
+@property (nonatomic) STTweetLabel *contentLabel;
 @property (nonatomic) UIWebView *vWeb;
 @property (nonatomic) UILabel *lastBrief;
 
@@ -19,6 +23,7 @@
 @property (nonatomic) UIView *headerView;
 
 @property (nonatomic) NSDictionary *headerData;
+@property (nonatomic) NSMutableArray *commentDatas;
 
 @end
 
@@ -36,8 +41,29 @@
     _vTb.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:_vTb];
     
+    [self initComments];
     [self initData];
 }
+
+- (void)initComments{
+   [APIClient getData:[API commentsShowPath:_topicId] params:nil success:^(id data) {
+       _commentDatas = [NSMutableArray arrayWithArray:data];
+       //[self formatComments:_commentDatas];
+       [_vTb reloadData];
+   } failure:^(NSError *error) {
+       okAlert(@"出错啦");
+   }];
+}
+
+- (void)formatComments:(NSArray *)comments {
+    [comments enumerateObjectsUsingBlock:^(id _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop){
+        NSDictionary *item = (NSDictionary *)obj;
+        NSMutableDictionary *newItem = [NSMutableDictionary dictionaryWithDictionary:item];
+        [newItem setValue:[NSString stringWithFormat:@"%f", [TopicCommentCell cellHeight:newItem]] forKey:@"cell_height"];
+        [_commentDatas addObject:newItem];
+    }];
+}
+
 
 - (void)initData{
    [APIClient getData:[API topicShowPath:_topicId] params:nil success:^(id data) {
@@ -72,40 +98,85 @@
     UILabel *brief = [UIutils createLabelWithText:[NSString stringWithFormat:@"at %@",str1] frame:CGRectMake(nickName.left, nickName.bottom + 5, WIN_WIDTH, 14) withSize:12 withColor:C6];
     [_headerView addSubview:brief];
     
-    _vWeb = [[UIWebView alloc] initWithFrame:CGRectMake(10, 50, WIN_WIDTH - 20, 30)];
-    _vWeb.backgroundColor = [UIColor whiteColor];
-    _vWeb.delegate = self;
-    _vWeb.scalesPageToFit = YES;
-    [_vWeb setOpaque:NO];
-    [_headerView addSubview:_vWeb];
+    _contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 50, WIN_WIDTH, 10)];
+    [_headerView addSubview:_contentView];
     
-    [_vWeb loadHTMLString:V(_headerData, @"content_rendered") baseURL:nil];
+    _contentLabel = [[STTweetLabel alloc] initWithFrame:CGRectMake(10, 10, WIN_WIDTH - 20, 50)];
+    [_contentView addSubview:_contentLabel];
+    
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.lineSpacing = 8;
+    _contentLabel.number = 0;
+    [_contentLabel setAttributes:@{NSForegroundColorAttributeName:C2, NSFontAttributeName: [UIFont systemFontOfSize:15.0], NSParagraphStyleAttributeName:paragraphStyle}];
+    [_contentLabel setText:V(_headerData, @"content")];
     
     NSDate *date2 = [NSDate dateWithTimeIntervalSince1970:[V(_headerData, @"last_touched") longLongValue]];
     NSString *str = [dateFormatter stringFromDate:date2];
-    _lastBrief = [UIutils createLabelWithText:str frame:CGRectMake(10, _vWeb.bottom, WIN_WIDTH, 15) withSize:12 withColor:C6];
+    _lastBrief = [UIutils createLabelWithText:str frame:CGRectMake(10, _contentView.bottom, WIN_WIDTH, 15) withSize:12 withColor:C6];
     [_headerView addSubview:_lastBrief];
     _vTb.tableHeaderView = _headerView;
+    
+    [self showContent];
 
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView{
-    CGSize fittingSize = [webView sizeThatFits:CGSizeZero];
+- (float)cellHeight:(NSDictionary *)data{
+    if ([V(data, @"content") isEqualToString:@""]) {
+        return 0;
+    }
+    
+    NSString *content = V(data, @"content");
+    
+    float height = 15;
+    if ([content length] > 0) {
+        
+        STTweetLabel *vContent = [[STTweetLabel alloc] initWithFrame:CGRectMake(10, 0, WIN_WIDTH - 20, 0)];
+        NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+        paragraphStyle.lineSpacing = 8;
+        [vContent setAttributes:@{NSForegroundColorAttributeName:C2, NSFontAttributeName: [UIFont systemFontOfSize: 15.0], NSParagraphStyleAttributeName:paragraphStyle}];
+        [vContent setText:content];
+        CGSize size = [vContent suggestedFrameSizeToFitEntireStringConstrainedToWidth:(WIN_WIDTH - 20)];
+        height += (size.height);
+    }
+    
+    return height;
+}
+
+- (void)showContent{
     [UIView animateWithDuration:0.35 animations:^{
-        _vWeb.height = fittingSize.height;
-        _lastBrief.top = _vWeb.bottom;
+        _contentLabel.height = [self cellHeight:_headerData];
+        _contentView.height = _contentLabel.height + 10;
+        _lastBrief.top = _contentView.bottom;
     } completion:^(BOOL finished) {
-        _headerView.height = _vWeb.height + 100;
+        _headerView.height = _contentLabel.height + 80;
         _vTb.tableHeaderView = _headerView;
     }];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 0;
+    return [_commentDatas count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    TopicCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TopicCommentCell"];
+    if (cell == nil) {
+        cell = [[TopicCommentCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"TopicCommentCell"];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    NSDictionary *data = [_commentDatas objectAtIndex:indexPath.row];
+    cell.data = data;
+    [cell initViews];
+
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSDictionary *data = [_commentDatas objectAtIndex:indexPath.row];
+    return [TopicCommentCell cellHeight:data];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -48,6 +48,8 @@
 		9E48973D1D7426DF000B7DFE /* UIutils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4897381D7426DF000B7DFE /* UIutils.m */; };
 		9E48973E1D7426DF000B7DFE /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E48973A1D7426DF000B7DFE /* UIView+Additions.m */; };
 		9E4897411D742934000B7DFE /* API.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4897401D742934000B7DFE /* API.m */; };
+		9E4897461D767EA5000B7DFE /* TopicCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4897451D767EA5000B7DFE /* TopicCommentCell.m */; };
+		9E48974A1D76D837000B7DFE /* STTweetLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4897491D76D837000B7DFE /* STTweetLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +149,10 @@
 		9E48973A1D7426DF000B7DFE /* UIView+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Additions.m"; sourceTree = "<group>"; };
 		9E48973F1D742934000B7DFE /* API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
 		9E4897401D742934000B7DFE /* API.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API.m; sourceTree = "<group>"; };
+		9E4897441D767EA5000B7DFE /* TopicCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopicCommentCell.h; path = src/TopicCommentCell.h; sourceTree = "<group>"; };
+		9E4897451D767EA5000B7DFE /* TopicCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopicCommentCell.m; path = src/TopicCommentCell.m; sourceTree = "<group>"; };
+		9E4897481D76D837000B7DFE /* STTweetLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STTweetLabel.h; sourceTree = "<group>"; };
+		9E4897491D76D837000B7DFE /* STTweetLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STTweetLabel.m; sourceTree = "<group>"; };
 		ED1C0D7CE420E2F9B6CED472 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB8EF51B40A9DBBE5E490CDA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -340,16 +346,8 @@
 		99E093AE1CE18CD900AC11BF /* src */ = {
 			isa = PBXGroup;
 			children = (
-				99E093AF1CE18CE500AC11BF /* FirstViewController.h */,
-				99E093B01CE18CE500AC11BF /* FirstViewController.m */,
-				99E093B11CE18CE500AC11BF /* SecondViewController.h */,
-				99E093B21CE18CE500AC11BF /* SecondViewController.m */,
-				99E093C61CE1BD7A00AC11BF /* FirstViewCell.h */,
-				99E093C71CE1BD7A00AC11BF /* FirstViewCell.m */,
-				999DB12A1CE2CB8B003D085B /* RecentController.h */,
-				999DB12B1CE2CB8B003D085B /* RecentController.m */,
-				999DB12D1CE304B5003D085B /* TopicShowController.h */,
-				999DB12E1CE304B5003D085B /* TopicShowController.m */,
+				9E4897431D767E79000B7DFE /* TopicList */,
+				9E4897421D767E5F000B7DFE /* TopicShow */,
 			);
 			name = src;
 			sourceTree = "<group>";
@@ -384,6 +382,7 @@
 		9E4897311D7426DF000B7DFE /* Commen */ = {
 			isa = PBXGroup;
 			children = (
+				9E4897471D76D837000B7DFE /* STTweetLabel */,
 				9E48973F1D742934000B7DFE /* API.h */,
 				9E4897401D742934000B7DFE /* API.m */,
 				9E4897321D7426DF000B7DFE /* APIClient.h */,
@@ -397,6 +396,41 @@
 				9E48973A1D7426DF000B7DFE /* UIView+Additions.m */,
 			);
 			path = Commen;
+			sourceTree = "<group>";
+		};
+		9E4897421D767E5F000B7DFE /* TopicShow */ = {
+			isa = PBXGroup;
+			children = (
+				999DB12D1CE304B5003D085B /* TopicShowController.h */,
+				999DB12E1CE304B5003D085B /* TopicShowController.m */,
+				9E4897441D767EA5000B7DFE /* TopicCommentCell.h */,
+				9E4897451D767EA5000B7DFE /* TopicCommentCell.m */,
+			);
+			name = TopicShow;
+			sourceTree = "<group>";
+		};
+		9E4897431D767E79000B7DFE /* TopicList */ = {
+			isa = PBXGroup;
+			children = (
+				99E093AF1CE18CE500AC11BF /* FirstViewController.h */,
+				99E093B01CE18CE500AC11BF /* FirstViewController.m */,
+				99E093B11CE18CE500AC11BF /* SecondViewController.h */,
+				99E093B21CE18CE500AC11BF /* SecondViewController.m */,
+				99E093C61CE1BD7A00AC11BF /* FirstViewCell.h */,
+				99E093C71CE1BD7A00AC11BF /* FirstViewCell.m */,
+				999DB12A1CE2CB8B003D085B /* RecentController.h */,
+				999DB12B1CE2CB8B003D085B /* RecentController.m */,
+			);
+			name = TopicList;
+			sourceTree = "<group>";
+		};
+		9E4897471D76D837000B7DFE /* STTweetLabel */ = {
+			isa = PBXGroup;
+			children = (
+				9E4897481D76D837000B7DFE /* STTweetLabel.h */,
+				9E4897491D76D837000B7DFE /* STTweetLabel.m */,
+			);
+			path = STTweetLabel;
 			sourceTree = "<group>";
 		};
 		EA9677F75C4EA91E7736F27A /* Pods */ = {
@@ -604,6 +638,7 @@
 				999DB1271CE1E61F003D085B /* UIScrollView+MJExtension.m in Sources */,
 				99E093B41CE18CE500AC11BF /* SecondViewController.m in Sources */,
 				999DB11B1CE1E61F003D085B /* MJRefreshHeader.m in Sources */,
+				9E4897461D767EA5000B7DFE /* TopicCommentCell.m in Sources */,
 				999DB1281CE1E61F003D085B /* UIScrollView+MJRefresh.m in Sources */,
 				999DB1181CE1E61F003D085B /* MJRefreshBackFooter.m in Sources */,
 				999DB12C1CE2CB8B003D085B /* RecentController.m in Sources */,
@@ -619,6 +654,7 @@
 				999DB1241CE1E61F003D085B /* MJRefreshStateHeader.m in Sources */,
 				999DB1211CE1E61F003D085B /* MJRefreshBackStateFooter.m in Sources */,
 				999DB12F1CE304B5003D085B /* TopicShowController.m in Sources */,
+				9E48974A1D76D837000B7DFE /* STTweetLabel.m in Sources */,
 				9E4897411D742934000B7DFE /* API.m in Sources */,
 				999DB1291CE1E61F003D085B /* UIView+MJExtension.m in Sources */,
 				999DB1231CE1E61F003D085B /* MJRefreshNormalHeader.m in Sources */,

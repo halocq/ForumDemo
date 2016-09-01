@@ -29,7 +29,7 @@
 }
 
 +(NSString *) commentsShowPath:(NSString *)topicId{
-    return [NSString stringWithFormat:@"api/replies/show.json?topic_id=%@", topicId];
+    return [NSString stringWithFormat:@"replies/show.json?topic_id=%@", topicId];
 }
 
 @end
